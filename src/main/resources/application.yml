@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: tg-bot-diana
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/diana-bot}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:admin}
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+    hibernate:
+      ddl-auto: update
+
+telegram:
+  bot:
+    token: ${BOT_TOKEN}
+    payment:
+      token: ${TELEGRAM_PAYMENT_TOKEN}
+    channel:
+      childlike:
+        id: ${CHILDLIKE_GROUP_ID:-1002625524255}
+        name: ${CHILDLIKE_GROUP_NAME:ТОПКаст для детей}
+        price:
+          default: ${CHILDLIKE_GROUP_PRICE_THREE_MOUTH:100}
+          year: ${CHILDLIKE_GROUP_PRICE_YEAR:199}
+          invateurl: ${CHILDLLIKE_GROUP_INVITE_LINK:https://t.me/+KU9lp6nRhWMxNDhi}
+      adult:
+        id: ${ADULT_GROUP_ID:-1002620091627}
+        name: ${ADULT_GROUP_NAME:ТОПКаст}
+        price:
+          default: ${ADULT_GROUP_PRICE_THREE_MOUTH:15}
+          year: ${ADULT_GROUP_PRICE_YEAR:14}
+          invateurl: ${ADULT_GROUP_INVATE_LINK:https://t.me/+Ofz_V9oxz5AxMTgy}

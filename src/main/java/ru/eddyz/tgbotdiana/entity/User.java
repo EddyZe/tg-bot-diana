@@ -1,4 +1,4 @@
-package ru.eddyz.tgbotdiana.models.entity;
+package ru.eddyz.tgbotdiana.entity;
 
 
 import jakarta.persistence.*;
@@ -23,6 +23,8 @@ public class User {
     private Long telegramId;
 
     private String username;
+
+    private Boolean isActive;
 
     private LocalDateTime createdAt;
 

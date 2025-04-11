@@ -1,4 +1,4 @@
-package ru.eddyz.tgbotdiana.models.entity;
+package ru.eddyz.tgbotdiana.entity;
 
 
 import jakarta.persistence.*;
@@ -30,6 +30,8 @@ public class Subscribe {
     private LocalDateTime startDate;
 
     private LocalDateTime endDate;
+
+    private Long groupTelegramId;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")

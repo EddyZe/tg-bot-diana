@@ -1,4 +1,5 @@
 package ru.eddyz.tgbotdiana.enums;
 
-public class TypeInvoice {
+public enum TypeInvoice {
+    SUBSCRIBE_ON_GROUP
 }

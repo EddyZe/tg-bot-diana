@@ -1,4 +1,7 @@
 package ru.eddyz.tgbotdiana.enums;
 
-public class CallbackButtonId {
+public enum CallbackButtonId {
+    SELECT_GROUP_SUBSCRIBE,
+    BACK_SELECT_GROUP_SUBSCRIBE,
+    CLOSE_DEFAULT,
 }

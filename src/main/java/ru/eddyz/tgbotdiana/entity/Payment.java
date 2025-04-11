@@ -1,4 +1,4 @@
-package ru.eddyz.tgbotdiana.models.entity;
+package ru.eddyz.tgbotdiana.entity;
 
 
 import jakarta.persistence.*;
