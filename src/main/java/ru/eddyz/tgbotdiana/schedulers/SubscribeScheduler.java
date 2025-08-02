@@ -34,7 +34,7 @@ public class SubscribeScheduler {
     private final CurrentListGroup currentListGroup;
 
     @Transactional
-    @Scheduled(cron = "1 * * * * *")
+    @Scheduled(cron = "0 * * * * *")
     public void checkSubscribers() {
         List<Subscribe> activeSubscribers = subscribeService.findByIsActive(true);
         for (Subscribe subscribe : activeSubscribers) {
